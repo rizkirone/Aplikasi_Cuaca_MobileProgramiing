@@ -35,9 +35,17 @@ class _CuacaScreenState extends State<CuacaScreen> {
                 
                 Row(
                  children:[
+                   Row(
+                  children:[
+                  SizedBox(
+                    height: 60,
+                  width: ukuranscreen.width*0.05,
+                  ),
+                  ],
+                ),
                   SizedBox(
                   height: 60,
-                  width: ukuranscreen.width*0.65,
+                  width: ukuranscreen.width*0.60,
                   child: TextFormField(
                   controller: provider.inputcity,
                   textAlign: TextAlign.center,
@@ -45,10 +53,7 @@ class _CuacaScreenState extends State<CuacaScreen> {
                     fontSize: 30,color: Colors.black,),
                   decoration: InputDecoration(
                     hintText: 'Masukkan Nama Kota',hintStyle: const TextStyle(color: Colors.grey,),
-                    border: OutlineInputBorder(
-                    borderRadius : BorderRadius.circular(10),
-                    
-                    ),
+                    border: OutlineInputBorder(),
                   ),  
                 ),
                   ),
@@ -65,7 +70,7 @@ class _CuacaScreenState extends State<CuacaScreen> {
 
                    SizedBox(
                      height: 60,
-                     width: ukuranscreen.width*0.3,
+                     width: ukuranscreen.width*0.25,
                           child:OutlinedButton(   
                                 onPressed: () => provider.tampilkanDataCuaca(
                                       city: provider.inputcity.text),
@@ -88,7 +93,8 @@ class _CuacaScreenState extends State<CuacaScreen> {
                 ),
 
 
-                SizedBox(
+                Container(
+                  color:Colors.cyan,
                   height: 200,
                   width: 200,
                   child: Image.network(
