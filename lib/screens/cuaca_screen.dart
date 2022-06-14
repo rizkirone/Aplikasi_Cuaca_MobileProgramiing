@@ -71,14 +71,14 @@ class _CuacaScreenState extends State<CuacaScreen> {
                    SizedBox(
                      height: 60,
                      width: ukuranscreen.width*0.25,
-                          child:OutlinedButton(   
+                          child:ElevatedButton(   
                                 onPressed: () => provider.tampilkanDataCuaca(
                                       city: provider.inputcity.text),
                                       style: ButtonStyle( 
                                       side: MaterialStateProperty.all( 
                                 const BorderSide(width: 1.5, color: Colors.grey)),
                                      ), 
-                            child: const Text('Tampilkan Data',style: TextStyle(color: Colors.black87,fontSize: 22,)), 
+                            child: const Text('Tampilkan',style: TextStyle(color: Colors.black87,fontSize: 22,)), 
                 ),
                    ),
                  ],
